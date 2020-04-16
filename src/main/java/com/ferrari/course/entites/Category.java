@@ -23,7 +23,6 @@ public class Category implements Serializable {
 	private Long id;
 	private String name;
 
-	// Muitas Category tem muitos Products (Muitos para Muitos)
 	@JsonIgnore
 	@ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();
